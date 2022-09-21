@@ -61,7 +61,7 @@ body{
 .principal{
     grid-area: principal;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr;
     max-width: 1000px;
     position: relative;
 }
@@ -192,11 +192,51 @@ p{
 }
 
 @media (max-width: 600px){
+    body{
+        gap: 40px;
+    }
+
+    .principal{
+        grid-template-columns: 1fr;
+    }
+
+    .logo{
+        margin: 30px 10px;
+    }
+
     .principal{
         grid-template-columns: 1fr;
     }
 
     .infos::before{
         display: none;
+    }
+
+    .infos{
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .infos > .vermais{
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .infos > h1{
+        margin-bottom: 7px;
+    }
+
+    .titulo{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 400px){
+    .titulo{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1rem;
     }
 }
